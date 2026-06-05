@@ -18,7 +18,18 @@ const project = {
     "微積分錯題集中於極限",
     "英文單字複習排入 20:00",
     "AI 已補充三題詳解"
-  ]
+  ],
+  "ui": {
+    "eyebrow": "自主學習桌面",
+    "primaryNav": "安排任務",
+    "capabilityNav": "學習工具",
+    "flowNav": "規劃流程",
+    "actionLabel": "加入時間軸",
+    "capabilityTitle": "學習桌面工具",
+    "flowTitle": "學習規劃流程",
+    "recordTitle": "學習動態",
+    "operationNotice": "已移到時間軸與 AI 伴學區，可加入任務、分析錯題並分享筆記。"
+  }
 };
 
 const canvas = document.getElementById("visualCanvas");
@@ -198,7 +209,7 @@ function showNotice(action) {
   const notice = document.getElementById("notice");
   if (!notice) return;
   const map = {
-    operate: "操作中心已就緒，所有作業皆可處理。",
+    operate: project.ui?.operationNotice || "已定位到主要工作區。",
     deploy: "課程資源批次已建立。",
     audit: "課後統一診斷已完成。",
     start: "低衝擊訓練已開始。",
